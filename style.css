@@ -19,7 +19,7 @@ top: 80px;
 left: 100px;
 right: 100px;
 bottom: 80px;
-background: url(/images/bg.jpg);
+/* background: url(/images/bg.jpg); */
 background-attachment: fixed;
 display: flex;
 justify-content: center;
@@ -28,7 +28,44 @@ flex-direction: column;
 box-shadow: 0 50px 50px rgba(0,0,0, 0.5),
             0 0 0 100px rgba(0,0,0, 0.1);
 }
+.container h1{
+    font-size: 698%;
+    margin-top: -61px;
+    /* color: #131414; */
+    color: transparent;
+    /* text-shadow: 1px 1px 2px #2bf8ff, 0 0 1em #2bf8ff, 0 0 0.2em #2bf8ff; */
+    text-decoration-color: #c70757;
+    animation: effect 2s linear infinite;
+    
+}
+@keyframes effect {
+    0% {
+        background: linear-gradient(
+                #008000, #00FF00);
+        -webkit-background-clip: text;
+    }
+    20% {
+        background: linear-gradient(
+                #83ad10, #c4a705);
+        -webkit-background-clip: text;
+    }
+    40% {
+        background: linear-gradient(
+                #f00c98, #420736);
+        -webkit-background-clip: text;
+    }
+    60% {
+        background: linear-gradient(
+                #1f0ad6, #023636);
+        -webkit-background-clip: text;
+    }
 
+    100% {
+        background: linear-gradient(
+                #3CE7D7, #000FFF);
+        -webkit-background-clip: text;
+    }
+}
 .container h2
 {
     text-align: center;
@@ -73,7 +110,7 @@ box-shadow: 0 50px 50px rgba(0,0,0, 0.5),
     left: 0;
     width: 100%;
     height: 35px;
-    background: #ff2b2b;
+    background: #2bf8ff;
     color:#333;
     font-size: 0.35em;
     line-height: 35px;
@@ -98,4 +135,10 @@ box-shadow: 0 50px 50px rgba(0,0,0, 0.5),
 .countdown #second::before
 {
     content: 'Seconds';
+}
+@media screen and(max-width:255px){
+.container{
+justify-content: center;
+}
+    
 }
